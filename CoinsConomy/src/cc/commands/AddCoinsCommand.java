@@ -19,17 +19,20 @@ public class AddCoinsCommand
   public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args)
   {
     if (cs.hasPermission("hub.admin")) {
-      if (args.length != 1) {
+      if (args.length == 2) {
         this.plugin.addCoins(args[0], Integer.parseInt(args[1]));
         try {
           this.plugin.sendServerMessage(args[0], main.Prefix + 
             "ßaDu hast ß6" + args[1] + " ßaCoins erhalten.");
+          cs.sendMessage(main.Prefix + "ß6" +  args[0] + "ßahatß6" + args[1] + "ßaCoins erhalten");
         } catch (IOException e) {
           e.printStackTrace();
         }
       } else {
-        cs.sendMessage("ßcN÷÷!");
+        cs.sendMessage("ßcNope!");
       }
+    } else {
+    	cs.sendMessage("ßcNope!");
     }
     return true;
   }
