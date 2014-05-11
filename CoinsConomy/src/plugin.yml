@@ -1,0 +1,10 @@
+name: CoinsConomy
+version: 1.0
+main: cc.main.main
+commands:
+  coins:
+    description: Zeigt deine Coins.
+    usage: /<command>
+  addcoins:
+    description: Gibt einem Spieler coins.
+    usage: /<command>
