@@ -29,7 +29,7 @@ public class AddCoinsCommand
           e.printStackTrace();
         }
       } else {
-        cs.sendMessage("§cNope!");
+        cs.sendMessage("§c/addcoins <spieler> <menge>");
       }
     } else {
     	cs.sendMessage("§cNope!");
